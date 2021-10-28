@@ -1,4 +1,4 @@
-/* Quattrocento */
+@import url("./menu.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
@@ -48,6 +48,7 @@ body {
   background: var(--black);
   min-width: 1200px;
   font-family: "Quattrocento", sans-serif;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -74,12 +75,20 @@ button:hover {
   background: var(--gold);
   color: var(--black);
 }
+.header {
+  position: sticky;
+  top: 0;
+}
 /* NAVBAR  */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
 
   background: var(--black);
 }
@@ -91,10 +100,17 @@ button:hover {
   color: var(--white);
   font-size: 24px;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizza-icon {
+  width: 40px;
 }
 .logo-img {
-  width: 150px;
+  width: 50px;
   height: auto;
+  /* background: #f2c94c; */
 }
 
 /* NAVBAR LEFT  */
@@ -129,18 +145,20 @@ button:hover {
   color: var(--gold);
 }
 .intro {
-  height: 619px;
+  height: 100vh;
+
+  background-image: url(../img/bg.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: var(--white);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: url(../img/bg.jfif);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 /*/////////////// intro /////////////*/
@@ -152,7 +170,7 @@ button:hover {
   margin-bottom: 250px;
 }
 .intro_title {
-  font-family: "Quattrocento",sans-serif;
+  font-family: "Quattrocento", sans-serif;
   font-size: 52px;
   font-weight: bold;
   color: var(--white);
@@ -172,10 +190,11 @@ button:hover {
   width: 600px;
 }
 .pizza-start {
-  width: 100%;
+  width: 600px;
   position: absolute;
-  top: 250px;
+  bottom: 0px;
 }
+
 /* ///////////// about  /////////// */
 .about {
   background: var(--black);
@@ -305,7 +324,7 @@ button:hover {
   margin: auto;
   text-align: center;
 }
-.menu-btn{
+.menu-btn {
   font-weight: 500;
 }
 
@@ -319,13 +338,19 @@ button:hover {
   position: relative;
 
   padding-top: 350px;
+  /* margin-top: 100px; */
+}
+.end-body {
+  text-align: center;
 }
 .pizza-end {
-  width: 1200px;
-  height: auto;
-
+  width: 600px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   position: absolute;
-  top: 100px;
+  top: 0px;
+  left: 30%;
 }
 .end-title {
   width: 300px;
@@ -365,4 +390,26 @@ footer {
   letter-spacing: 6%;
   text-transform: uppercase;
   text-align: center;
+}
+.pagination {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-links {
+  display: inline-block;
+}
+.pagination-links a {
+  font-family: "Quattrocento", sans-serif;
+  color: #fff;
+  float: left;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination-links a:hover {
+  color: #f2c94c;
+  border-bottom: 2px solid #f2c94c;
 }
